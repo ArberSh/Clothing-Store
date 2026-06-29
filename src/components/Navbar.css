@@ -209,6 +209,8 @@
   .mobile-menu__cta-item {
     border: none !important;
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
   .mobile-menu__cta {
     display: inline-block !important;
