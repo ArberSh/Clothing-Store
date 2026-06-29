@@ -1,14 +1,5 @@
 import './InstagramFeed.css';
 
-const posts = [
-  { emoji: '🧕', caption: 'Abaya e re / New collection', likes: '247', gradient: 'linear-gradient(135deg,#3a2418,#2d1c14)' },
-  { emoji: '🌙', caption: 'Parfum Oud arabik', likes: '183', gradient: 'linear-gradient(135deg,#231510,#3a2418)' },
-  { emoji: '🤲', caption: 'Veshje namazi premium', likes: '312', gradient: 'linear-gradient(135deg,#2d1c14,#1a0f0a)' },
-  { emoji: '🌿', caption: 'Produkte bio Hallall', likes: '195', gradient: 'linear-gradient(135deg,#1a0f0a,#2d1c14)' },
-  { emoji: '✨', caption: 'Koleksioni Ramadan 2025', likes: '428', gradient: 'linear-gradient(135deg,#3a2418,#231510)' },
-  { emoji: '🕌', caption: 'Besimi ynë, bukuria jonë', likes: '356', gradient: 'linear-gradient(135deg,#2d1c14,#3a2418)' },
-];
-
 export default function InstagramFeed() {
   return (
     <section className="insta section-pad" id="instagram">
@@ -24,37 +15,6 @@ export default function InstagramFeed() {
         >
           @muslim_brand_albania
         </a>
-      </div>
-
-      <div className="insta__scroll">
-        <div className="insta__track">
-          {posts.map((p, i) => (
-            <a
-              key={i}
-              href="https://instagram.com/muslim_brand_albania"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="insta-post"
-              style={{ background: p.gradient }}
-            >
-              {/* Islamic geo overlay */}
-              <div className="insta-post__geo" aria-hidden="true">
-                <svg viewBox="0 0 100 100">
-                  <polygon points="50,5 61,35 90,35 67,54 76,84 50,65 24,84 33,54 10,35 39,35"
-                    fill="none" stroke="rgba(201,168,76,0.2)" strokeWidth="0.8" />
-                  <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(201,168,76,0.1)" strokeWidth="0.5" />
-                </svg>
-              </div>
-
-              <span className="insta-post__emoji">{p.emoji}</span>
-
-              <div className="insta-post__overlay">
-                <p className="insta-post__caption">{p.caption}</p>
-                <span className="insta-post__likes">♡ {p.likes}</span>
-              </div>
-            </a>
-          ))}
-        </div>
       </div>
 
       <div className="insta__cta container">
